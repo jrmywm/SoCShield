@@ -1,0 +1,9 @@
+VCD info: dumpfile soc.vcd opened for output.
+BOOT RV32I
+DEFAULT DENY
+GRANT AND CONTAINMENT
+NO BYPASS
+REVOKED
+REGRANT
+PASS soc mode=1 cycles=17279 accepted=1067 errors=966 overlap=1
+C:\Users\User\Documents\SoCShield\tb\soc\tb_soc.sv:129: $finish called at 172835000 (1ps)

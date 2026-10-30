@@ -1,0 +1,62 @@
+[
+  {
+    "path": "build\\prove\\status",
+    "status": "PASS 0 0"
+  },
+  {
+    "path": "build\\bmc\\status",
+    "status": "PASS 0 0"
+  },
+  {
+    "path": "build\\cover\\status",
+    "status": "PASS 0 0"
+  },
+  {
+    "path": "build\\comparison\\shadow_bmc\\status",
+    "status": "PASS 0 0"
+  },
+  {
+    "path": "build\\comparison\\shadow_cover\\status",
+    "status": "PASS 0 0"
+  },
+  {
+    "path": "build\\comparison\\shadow_prove\\status",
+    "status": "PASS 0 0"
+  },
+  {
+    "path": "build\\comparison\\stop_bmc\\status",
+    "status": "PASS 0 0"
+  },
+  {
+    "path": "build\\comparison\\stop_cover\\status",
+    "status": "PASS 0 0"
+  },
+  {
+    "path": "build\\comparison\\stop_prove\\status",
+    "status": "PASS 0 0"
+  },
+  {
+    "path": "build\\soc\\verification\\mmio-bmc0\\status",
+    "status": "PASS 0 0"
+  },
+  {
+    "path": "build\\soc\\verification\\mmio-bmc1\\status",
+    "status": "PASS 0 0"
+  },
+  {
+    "path": "build\\soc\\verification\\mmio-prove0\\status",
+    "status": "PASS 0 0"
+  },
+  {
+    "path": "build\\soc\\verification\\mmio-prove1\\status",
+    "status": "PASS 0 0"
+  },
+  {
+    "path": "build\\soc\\verification\\shared-cover\\status",
+    "status": "PASS 0 0"
+  },
+  {
+    "path": "build\\soc\\verification\\shared-prove\\status",
+    "status": "PASS 0 0"
+  }
+]

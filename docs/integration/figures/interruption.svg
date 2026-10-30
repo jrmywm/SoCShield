@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="450" viewBox="0 0 960 450">
+<rect width="960" height="450" fill="#fff"/>
+<g font-family="Arial" fill="#172338">
+<text x="35" y="35" font-size="21">Observed request gaps within the active DMA job</text>
+<text x="35" y="60" font-size="12">Cycles; no forced stall/contention. At the slowest setting the shadow job finishes before commit.</text>
+<rect x="115" y="260.87" width="64" height="89.13" fill="#245a81"/><text x="147" y="248.87" text-anchor="middle" font-size="14">976</text>
+<rect x="193" y="349.54" width="64" height="0.46" fill="#c57531"/><text x="225" y="337.54" text-anchor="middle" font-size="14">5</text>
+<text x="185" y="375" text-anchor="middle" font-size="14">0 programming-loop iterations</text>
+<rect x="385" y="217.12" width="64" height="132.88" fill="#245a81"/><text x="417" y="205.12" text-anchor="middle" font-size="14">1455</text>
+<rect x="463" y="349.54" width="64" height="0.46" fill="#c57531"/><text x="495" y="337.54" text-anchor="middle" font-size="14">5</text>
+<text x="455" y="375" text-anchor="middle" font-size="14">4 programming-loop iterations</text>
+<rect x="655" y="90.00" width="64" height="260.00" fill="#245a81"/><text x="687" y="78.00" text-anchor="middle" font-size="14">2847</text>
+<rect x="733" y="349.54" width="64" height="0.46" fill="#c57531"/><text x="765" y="337.54" text-anchor="middle" font-size="14">5</text>
+<text x="725" y="375" text-anchor="middle" font-size="14">16 programming-loop iterations</text>
+<text x="110" y="420" fill="#245a81">Blue: stop and program</text><text x="410" y="420" fill="#c57531">Orange: shadow bank</text></g></svg>

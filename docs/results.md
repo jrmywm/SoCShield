@@ -1,5 +1,7 @@
 # SoCShield: verified implementation and first comparison
 
+This is the historical standalone baseline. The later RISC-V integration and its current measurements are documented in [the integrated results](integration/results.md). The project repository is now [jrmywm/SoCShield](https://github.com/jrmywm/SoCShield).
+
 2026-10-30. The project lives in `C:\Users\User\Documents\SoCShield`. No GitHub repository has been selected.
 
 ## Result

@@ -1,0 +1,132 @@
+[
+  {
+    "trace": "build\\system.vcd",
+    "sha256": "c49f95eb1c6659c7fbff8e4c7b445b92ffcb233b9030a47ed08cf12c7b9c205e",
+    "commits": 0,
+    "accepted": 539,
+    "completed": 536,
+    "forwarded": 209,
+    "denied": 329,
+    "aborted": 3
+  },
+  {
+    "trace": "build\\comparison\\mode0_gap0_stall0\\update.vcd",
+    "sha256": "0be910769f5b739d49eeca712d38c99022753e6da7e9d8b7e84b1e36046cdb08",
+    "commits": 4,
+    "accepted": 26,
+    "completed": 26,
+    "forwarded": 10,
+    "denied": 16,
+    "aborted": 0
+  },
+  {
+    "trace": "build\\comparison\\mode0_gap0_stall64\\update.vcd",
+    "sha256": "77e89e43d2b16b8030d513405504563fd6f0f7f7762e814d28318182c5c275ac",
+    "commits": 4,
+    "accepted": 26,
+    "completed": 26,
+    "forwarded": 10,
+    "denied": 16,
+    "aborted": 0
+  },
+  {
+    "trace": "build\\comparison\\mode0_gap4_stall0\\update.vcd",
+    "sha256": "e579bc9de8fac7fbbf2bad243ee12336938a03cc0f86256dc110f444da993fb3",
+    "commits": 4,
+    "accepted": 26,
+    "completed": 26,
+    "forwarded": 10,
+    "denied": 16,
+    "aborted": 0
+  },
+  {
+    "trace": "build\\comparison\\mode0_gap4_stall64\\update.vcd",
+    "sha256": "a5f91df39a34ae24de419484af691aacd66e3902c7b2f15c59b84db0373ccf25",
+    "commits": 4,
+    "accepted": 26,
+    "completed": 26,
+    "forwarded": 10,
+    "denied": 16,
+    "aborted": 0
+  },
+  {
+    "trace": "build\\comparison\\mode0_gap16_stall0\\update.vcd",
+    "sha256": "02b475f99123def102e95459b7d6cca55136fd395de049341bb5b080da0bb5d1",
+    "commits": 4,
+    "accepted": 26,
+    "completed": 26,
+    "forwarded": 10,
+    "denied": 16,
+    "aborted": 0
+  },
+  {
+    "trace": "build\\comparison\\mode0_gap16_stall64\\update.vcd",
+    "sha256": "459aee32565320f32f32edce13fda04d14a2468832e867f252135e4ecac53b91",
+    "commits": 4,
+    "accepted": 26,
+    "completed": 26,
+    "forwarded": 10,
+    "denied": 16,
+    "aborted": 0
+  },
+  {
+    "trace": "build\\comparison\\mode1_gap0_stall0\\update.vcd",
+    "sha256": "a4e1f978a06b9c9b62f0f7e2c2a532249449fa0b2857b57643361818edddd186",
+    "commits": 4,
+    "accepted": 27,
+    "completed": 27,
+    "forwarded": 11,
+    "denied": 16,
+    "aborted": 0
+  },
+  {
+    "trace": "build\\comparison\\mode1_gap0_stall64\\update.vcd",
+    "sha256": "cb83a0a51a33a0baa4972823f0fba5f28d4f1ff1c3fafd5ab9689a51caaeecc1",
+    "commits": 4,
+    "accepted": 26,
+    "completed": 26,
+    "forwarded": 10,
+    "denied": 16,
+    "aborted": 0
+  },
+  {
+    "trace": "build\\comparison\\mode1_gap4_stall0\\update.vcd",
+    "sha256": "6f59ff8e09dcef905570746536ef6d8ee931eb08fff81d2d62141910959159a4",
+    "commits": 4,
+    "accepted": 29,
+    "completed": 29,
+    "forwarded": 13,
+    "denied": 16,
+    "aborted": 0
+  },
+  {
+    "trace": "build\\comparison\\mode1_gap4_stall64\\update.vcd",
+    "sha256": "b3f1219f2d2d7c9dc90dfc0f291afb6f839837d6ea94ac19a4bd0b950157733d",
+    "commits": 4,
+    "accepted": 26,
+    "completed": 26,
+    "forwarded": 10,
+    "denied": 16,
+    "aborted": 0
+  },
+  {
+    "trace": "build\\comparison\\mode1_gap16_stall0\\update.vcd",
+    "sha256": "86115a85a0575a0552753a1d2ee9cdb71b1fa23fb3e2f63d51af56d134468085",
+    "commits": 4,
+    "accepted": 36,
+    "completed": 36,
+    "forwarded": 20,
+    "denied": 16,
+    "aborted": 0
+  },
+  {
+    "trace": "build\\comparison\\mode1_gap16_stall64\\update.vcd",
+    "sha256": "bcfae3c3d409976909a050348d79a17df9f3e83d524fb1972cc11e4ef78818d8",
+    "commits": 4,
+    "accepted": 27,
+    "completed": 27,
+    "forwarded": 11,
+    "denied": 16,
+    "aborted": 0
+  }
+]

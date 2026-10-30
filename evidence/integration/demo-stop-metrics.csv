@@ -1,0 +1,2 @@
+mode,seed,cycles,accepted,completed,forwarded,errors,alias_errors,begin_cycle,commit_cycle,ack_cycle,program_cycles,max_acceptance_gap,max_latency,overlap,cpu_accepted,cpu_completed,contested_cycles,inhibited_cycles
+0,1,18119,1067,1067,64,1006,3,9811,10785,10786,1173,976,4,1,38,38,0,975

@@ -1,0 +1,29 @@
+{
+  "tool": "Yosys 0.70+277 (git sha1 77dddbd66, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)",
+  "source_liberty_sha256": "210e56be3a3a0907b5241a34d277f664cf4b4d91dcb49a27ff813df4406a5889",
+  "pruned_liberty_sha256": "497838b6b9ac6e38fa4fe897c8f7244583601ab08e9eb7ce2ea88e6c6a1d8882",
+  "source_sha256": {
+    "rtl\\firewall_update.sv": "8f057a8c45829d79cb6de03ed420f21ceba3a79ade1b27beb4e5d51e946b9bbb",
+    "rtl\\peripherals\\firewall_mmio.sv": "3fd1d6c83bb6b04c6f3af7b657c076a5d86c8dc51ea9f89d5fd955082e40e427"
+  },
+  "top": "firewall_mmio",
+  "abc_target_ps": 5000,
+  "abc_load_fF": 10.0,
+  "results": [
+    {
+      "shadow": 0,
+      "cells": 3334,
+      "sequential_cells": 590,
+      "area_um2": 29577.1168,
+      "timing": "unavailable"
+    },
+    {
+      "shadow": 1,
+      "cells": 4172,
+      "sequential_cells": 861,
+      "area_um2": 42024.0544,
+      "timing": "unavailable"
+    }
+  ],
+  "timing_note": "No independent static timing analysis performed; mapping target is not a timing result."
+}

@@ -1,0 +1,33 @@
+{
+  "arguments": {
+    "boot": false,
+    "mode": 1,
+    "gap": 0,
+    "contention": 0,
+    "stall": 0,
+    "seed": 1,
+    "random_stalls": false,
+    "allow_idle_update": false,
+    "trace": true,
+    "out": "build/soc/demo-shadow"
+  },
+  "sources": {
+    "third_party\\picorv32\\picorv32.v": "0836050971b3c6cdd28ac3b1e5719a67fb645161912bef1e472e63995ceb0622",
+    "rtl\\firewall_update.sv": "8f057a8c45829d79cb6de03ed420f21ceba3a79ade1b27beb4e5d51e946b9bbb",
+    "rtl\\peripherals\\firewall_mmio.sv": "3fd1d6c83bb6b04c6f3af7b657c076a5d86c8dc51ea9f89d5fd955082e40e427",
+    "rtl\\peripherals\\dma_engine.sv": "83ce775bfb2ea7ab25f1624d891a725aed68b122c95a1ee6e7690ca3fa147928",
+    "rtl\\soc\\shared_sram.sv": "504f0c14efd84ae79ec61c79f841f49d7100788a03cfd6347917f4f0d71dbdbc",
+    "rtl\\soc\\soc_top.sv": "2261416c27f84684ae58b36450112173450ee5214fb5ff9a99f4a5601d84094e",
+    "tb\\soc\\tb_soc.sv": "3311cb25abd8eed12cb743613b2779328a85aadbc979be0f9c033d42ed78bf24",
+    "rtl\\soc\\soc_map.vh": "0314cc206762aba59e1a97bc0695b1b3062b935c620ff07b374cdb2a1054f954",
+    "config\\soc_map.json": "16ac03260320d256188c504364c00556b96746cdf7bdd6bd61c9a2afd99b6a11",
+    "scripts\\soc.py": "2d6622abd9f7fe73df7d17f35f671df08a8ce325d44391ed522d22b5974ff511",
+    "firmware\\link.ld": "15dae1f67f2ec1a0cad589e2a89e1efa36a3cda7e60ab2a302b40f37ac7e8bd3",
+    "firmware\\main.c": "78945cdc1444eb8d4e90eceed32fd6e8886e2a3e43a59c3b5c8f5eb6ac3d2865",
+    "firmware\\soc.h": "46d143b9853c243d3c1559073c5d92e589cd10feea46c4956374680cc7789e5b",
+    "firmware\\soc_map.h": "dcc60ca8d1da59695f2e1402e4b44cb1d7b1f7d6968170ab7eca15f06ecd1a69",
+    "firmware\\start.S": "b41193ddf29bef6244f1e222e238e3605829ee0d2f8d6a54bf6efb1aa69dd4b6"
+  },
+  "elf_sha256": "4a2c336fcc2bfbcbdeb651cee3c8f4ce478402c381d17315e0aca8156378a590",
+  "compiler": "riscv-none-elf-gcc.exe (xPack GNU RISC-V Embedded GCC x86_64) 15.2.0"
+}

@@ -1,5 +1,23 @@
 # SoCShield
 
+## Integrated RISC-V system
+
+The project now includes a pinned PicoRV32 CPU executing compiled RV32I firmware, a trusted configuration interface, a DMA-like peripheral, and shared SRAM arbitration. Start with [the integrated results](docs/integration/results.md), [architecture](docs/integration/architecture.md), [reproduction instructions](docs/integration/reproduce.md), and [student walkthrough](docs/integration/student-guide.md).
+
+From this directory in PowerShell:
+
+```powershell
+.\scripts\run_soc.ps1 boot
+.\scripts\run_soc.ps1 demo
+.\scripts\run_soc.ps1 verify
+.\scripts\run_soc.ps1 evaluate
+.\scripts\run_soc.ps1 map
+```
+
+The required deliverable is RTL simulation with compiled firmware, component verification, and controlled measurements. Technology mapping measures the firewall/control wrapper's library-cell area. Static timing and physical FPGA operation are not established. Dependencies can be fetched and checked with `scripts/setup_soc.py`; the original OSS CAD Suite installation remains required.
+
+## Standalone baseline
+
 A working RTL portfolio study of a hardware firewall on the sole memory path of an untrusted DMA-like peripheral. It enforces four address regions and compares two ways to change permissions safely during traffic. This is established access-control technology; the contribution here is the implementation, verification evidence, and controlled cost comparison.
 
 Start with [the specification](docs/spec.md), [verification scope](docs/verification.md), and [measured findings](docs/results.md). The custom ready/valid interface is not AXI.
