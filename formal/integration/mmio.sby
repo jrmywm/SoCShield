@@ -1,0 +1,27 @@
+[tasks]
+prove0
+prove1
+bmc0
+bmc1
+[options]
+prove0: mode prove
+prove1: mode prove
+bmc0: mode bmc
+bmc1: mode bmc
+depth 20
+[engines]
+prove0: abc pdr
+prove1: abc pdr
+bmc0: smtbmc z3
+bmc1: smtbmc z3
+[script]
+read -formal -D FORMAL_MMIO -I . mmio_backend.sv firewall_mmio.sv
+prove0: chparam -set SHADOW 0 firewall_mmio
+bmc0: chparam -set SHADOW 0 firewall_mmio
+prove1: chparam -set SHADOW 1 firewall_mmio
+bmc1: chparam -set SHADOW 1 firewall_mmio
+prep -top firewall_mmio
+[files]
+../../rtl/peripherals/firewall_mmio.sv
+mmio_backend.sv
+mmio_properties.svh
