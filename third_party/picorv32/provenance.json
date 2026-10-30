@@ -1,0 +1,18 @@
+{
+  "files": [
+    {
+      "Path": "C:\\Users\\User\\Documents\\SoCShield\\third_party\\picorv32\\COPYING",
+      "Hash": "041EBC727233E5BF096DD41260CBB81014D3D29CA007A15F3B1807D4E9FF288E"
+    },
+    {
+      "Path": "C:\\Users\\User\\Documents\\SoCShield\\third_party\\picorv32\\picorv32.v",
+      "Hash": "0836050971B3C6CDD28AC3B1E5719A67FB645161912BEF1E472E63995CEB0622"
+    },
+    {
+      "Path": "C:\\Users\\User\\Documents\\SoCShield\\third_party\\picorv32\\README.md",
+      "Hash": "399C2D2E00E4581EE4EF33034089992401E10C4E917A33CD363B80DFB283E964"
+    }
+  ],
+  "revision": "ef203c2b0a3fb793280f5114941416c425c5b461",
+  "repository": "https://github.com/YosysHQ/picorv32"
+}
