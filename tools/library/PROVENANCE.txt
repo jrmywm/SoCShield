@@ -1,0 +1,5 @@
+Library source: https://github.com/parallaxsw/OpenSTA/blob/b99a8e528de098e4e06dbb6a0bb5423d6ada2f51/examples/sky130hd_tt.lib.gz
+Upstream repository revision: b99a8e528de098e4e06dbb6a0bb5423d6ada2f51
+File: sky130hd_tt.lib.gz
+SHA-256: 210e56be3a3a0907b5241a34d277f664cf4b4d91dcb49a27ff813df4406a5889
+Refer to upstream project and its license notices for usage terms.
