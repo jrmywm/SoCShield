@@ -1,0 +1,25 @@
+[tasks]
+prove
+bmc
+cover
+
+[options]
+prove: mode prove
+prove: depth 4
+bmc: mode bmc
+bmc: depth 12
+cover: mode cover
+cover: depth 24
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal -sv firewall.sv
+prep -top firewall
+memory_map
+opt -full
+
+[files]
+rtl/firewall.sv
+formal/firewall_properties.svh

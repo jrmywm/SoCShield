@@ -1,0 +1,30 @@
+[tasks]
+stop_prove stop prove
+shadow_prove shadow prove
+stop_bmc stop bmc
+shadow_bmc shadow bmc
+stop_cover stop cover
+shadow_cover shadow cover
+
+[options]
+prove: mode prove
+prove: depth 6
+bmc: mode bmc
+bmc: depth 24
+cover: mode cover
+cover: depth 32
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal -sv firewall_update.sv
+stop: chparam -set SHADOW 0 firewall_update
+shadow: chparam -set SHADOW 1 firewall_update
+prep -top firewall_update
+memory_map
+opt -full
+
+[files]
+rtl/firewall_update.sv
+formal/update_properties.svh

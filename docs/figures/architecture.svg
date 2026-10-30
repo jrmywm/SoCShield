@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="470" viewBox="0 0 1280 470">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#8aa9cf"/></marker></defs>
+<rect width="1280" height="470" fill="#101827"/>
+<style>text{font:16px sans-serif;fill:#dce5f4;text-anchor:middle}.title{font-size:23px;font-weight:600}.small{font-size:14px;fill:#a9bcd4}.box{fill:#17283e;stroke:#5be0b1;stroke-width:1.5}.link{fill:none;stroke:#8aa9cf;stroke-width:2;marker-end:url(#arrow)}</style>
+<text x="640" y="29" class="title">SoCShield: logical architecture</text>
+<rect x="30" y="65" width="200" height="70" rx="9" class="box"/><text x="130" y="95">Trusted controller</text><text x="130" y="118" class="small">configuration / commit</text>
+<rect x="300" y="65" width="280" height="70" rx="9" class="box"/><text x="440" y="94">Four-region active policy</text><text x="440" y="118" class="small">optional inactive shadow bank</text>
+<path d="M230 100H300" class="link"/><path d="M440 135V185" class="link"/>
+<rect x="30" y="185" width="200" height="90" rx="9" class="box"/><text x="130" y="217">Untrusted peripheral</text><text x="130" y="242" class="small">fixed ingress identity</text><text x="130" y="261" class="small">sole memory path</text>
+<rect x="300" y="185" width="280" height="90" rx="9" class="box"/><text x="440" y="214">Lowest-index match</text><text x="440" y="239" class="small">alignment + full-word bounds</text><text x="440" y="260" class="small">read/write; default deny</text>
+<rect x="650" y="185" width="270" height="90" rx="9" class="box"/><text x="785" y="216">One transaction slot</text><text x="785" y="242" class="small">captured payload; issue once</text>
+<rect x="1000" y="185" width="240" height="90" rx="9" class="box"/><text x="1120" y="217">Memory interface</text><text x="1120" y="242" class="small">custom ready / valid</text>
+<path d="M230 230H300" class="link"/><path d="M580 230H650" class="link"/><path d="M920 230H1000" class="link"/><text x="960" y="216" class="small">allow</text>
+<rect x="650" y="355" width="270" height="75" rx="9" class="box"/><text x="785" y="385">Held upstream response</text><text x="785" y="410" class="small">error sanitization; backpressure</text>
+<path d="M1120 275V392H920" class="link"/><text x="1030" y="379" class="small">response</text>
+<path d="M440 275V370H650" class="link"/><text x="536" y="356" class="small">deny: error + zero</text>
+<path d="M650 412H130V275" class="link"/>
+<text x="640" y="455" class="small">Commit acknowledgment follows completion of all old-policy operations. Logical diagram, not a synthesized schematic.</text>
+</svg>
