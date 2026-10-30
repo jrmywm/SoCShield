@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1420" height="880" viewBox="0 0 1420 880" role="img" aria-labelledby="title description">
+  <title id="title">SoCShield RISC-V system architecture</title>
+  <desc id="description">Trusted firmware on PicoRV32 programs CPU-only registers. The untrusted DMA-like engine has one memory path: SoCShield, arbitration, shared SRAM. The CPU has separate trusted memory access. Dashed return arrows carry responses. This is an RTL-derived architectural view of a simulated system.</desc>
+  <defs>
+    <marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#285b91"/></marker>
+    <marker id="teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#137c79"/></marker>
+    <marker id="gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#6c7d8d"/></marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#172d42}
+      .heading{font-size:25px;font-weight:700}.body{font-size:17px}.small{font-size:14px;fill:#526579}
+      .label{font-size:14px;font-weight:700;letter-spacing:1px}.mono{font-family:Consolas,monospace;font-size:15px}
+      .control{fill:none;stroke:#285b91;stroke-width:2.5;marker-end:url(#blue)}
+      .data{fill:none;stroke:#137c79;stroke-width:4;marker-end:url(#teal)}
+      .response{fill:none;stroke:#6c7d8d;stroke-width:2;stroke-dasharray:6 5;marker-end:url(#gray)}
+    </style>
+  </defs>
+  <rect width="1420" height="880" fill="#ffffff"/>
+  <text x="48" y="57" font-size="35" font-weight="700">SoCShield</text>
+  <text x="48" y="91" font-size="19" fill="#526579">RISC-V firmware, hardware access control, and a protected memory path</text>
+  <rect x="1170" y="35" width="200" height="37" rx="18" fill="#eef3f7"/>
+  <text x="1270" y="59" text-anchor="middle" class="label">RTL SIMULATION</text>
+
+  <rect x="355" y="145" width="1020" height="215" rx="18" fill="#f3f7fc" stroke="#9db5d0" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="380" y="176" class="label" fill="#285b91">TRUSTED CPU / FIRMWARE AND CPU-ONLY RESOURCES</text>
+  <rect x="390" y="205" width="270" height="115" rx="12" fill="#fff" stroke="#9db5d0" stroke-width="1.5"/>
+  <text x="412" y="237" class="heading">CPU-only MMIO</text>
+  <text x="412" y="267" class="body">Policy and DMA registers</text>
+  <text x="412" y="294" class="mono">0x20000000 / 0x20001000</text>
+  <rect x="740" y="205" width="270" height="115" rx="12" fill="#285b91"/>
+  <text x="762" y="239" class="heading" style="fill:#fff">PicoRV32 CPU</text>
+  <text x="762" y="269" class="body" style="fill:#fff">Compiled RV32I firmware</text>
+  <text x="762" y="295" class="small" style="fill:#e2edf8">Native bus + address decoder</text>
+  <rect x="1080" y="205" width="270" height="115" rx="12" fill="#fff" stroke="#9db5d0" stroke-width="1.5"/>
+  <text x="1102" y="237" class="heading">Private RAM</text>
+  <text x="1102" y="267" class="body">64 KiB: code, data, stack</text>
+  <text x="1102" y="294" class="mono">0x00000000–0x0000FFFF</text>
+  <path d="M740 262H660" class="control"/><text x="700" y="248" text-anchor="middle" class="small">MMIO</text>
+  <path d="M1010 262H1080" class="control"/><text x="1045" y="248" text-anchor="middle" class="small">R/W</text>
+  <path d="M525 320V520" class="control"/>
+  <text x="545" y="418" class="body" fill="#285b91">Policy updates</text>
+  <text x="545" y="443" class="small">Whole entries + commit status</text>
+  <path d="M390 262H180V530" class="control"/>
+  <text x="66" y="422" class="body" fill="#285b91">DMA job</text>
+  <text x="66" y="447" class="body" fill="#285b91">configuration</text>
+  <path d="M890 320V530" class="control"/>
+  <text x="913" y="418" class="body" fill="#285b91">Trusted CPU</text>
+  <text x="913" y="443" class="body" fill="#285b91">memory access</text>
+
+  <rect x="55" y="530" width="250" height="150" rx="14" fill="#fff5e9" stroke="#c98134" stroke-width="1.8"/>
+  <text x="77" y="559" class="label" style="fill:#98601f">UNTRUSTED REQUESTER</text>
+  <text x="77" y="596" class="heading">DMA-like engine</text>
+  <text x="77" y="625" class="body">Read / write transactions</text>
+  <text x="77" y="650" class="small">One operation outstanding</text>
+  <rect x="405" y="520" width="310" height="170" rx="14" fill="#eaf7f5" stroke="#137c79" stroke-width="2.5"/>
+  <text x="431" y="553" class="label" style="fill:#137c79">HARDWARE ENFORCEMENT</text>
+  <text x="431" y="593" class="heading">SoCShield firewall</text>
+  <text x="431" y="625" class="body">Priority + whole-word checks</text>
+  <text x="431" y="654" class="body">Default deny · safe updates</text>
+  <rect x="790" y="530" width="220" height="150" rx="14" fill="#f6f8fa" stroke="#a1afbc" stroke-width="1.5"/>
+  <text x="812" y="573" class="heading">Arbitration</text>
+  <text x="812" y="607" class="body">CPU / filtered DMA</text>
+  <text x="812" y="635" class="small">Owned response slot</text>
+  <rect x="1080" y="530" width="280" height="150" rx="14" fill="#f0f7f1" stroke="#80a486" stroke-width="1.5"/>
+  <text x="1102" y="573" class="heading">Shared SRAM</text>
+  <text x="1102" y="607" class="body">64 KiB · full-address check</text>
+  <text x="1102" y="635" class="mono">0x10000000–0x1000FFFF</text>
+  <path d="M305 585H405" class="data"/><text x="355" y="570" text-anchor="middle" class="small">requests</text>
+  <path d="M715 585H790" class="data"/><text x="752" y="570" text-anchor="middle" class="small">allowed</text>
+  <path d="M1010 585H1080" class="data"/>
+  <path d="M1080 655H1010" class="response"/>
+  <path d="M790 655H715" class="response"/>
+  <path d="M405 655H305" class="response"/>
+  <text x="350" y="715" text-anchor="middle" class="small">Responses: data / error</text>
+  <text x="1075" y="715" text-anchor="middle" class="small">Arbitration and storage are one shared_sram RTL module.</text>
+
+  <line x1="48" y1="759" x2="1372" y2="759" stroke="#d9e2ea"/>
+  <text x="48" y="794" class="body">One clock · Four regions · Aligned 32-bit DMA accesses · Stop-and-program or shadow-bank updates</text>
+  <text x="48" y="827" class="small">Solid teal: DMA requests. Dashed gray: responses. Blue: trusted CPU access and control. Console/testbench plumbing omitted.</text>
+  <text x="48" y="851" class="small">Derived from soc_top.sv, firewall_mmio.sv, and shared_sram.sv. Architecture view; not a synthesized schematic or physical FPGA layout.</text>
+</svg>

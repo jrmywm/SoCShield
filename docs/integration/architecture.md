@@ -6,16 +6,9 @@ This is a one-clock RTL simulation platform for studying the existing SoCShield 
 
 ## Block and access path
 
-```mermaid
-flowchart LR
-    CPU[PicoRV32 and trusted firmware] -->|boot, code, stack| PRAM[64 KiB private RAM]
-    CPU -->|CPU-local MMIO| CTRL[Firewall, DMA, simulation log]
-    CPU -->|trusted shared-memory port| ARB[One-slot shared SRAM arbiter]
-    DMA[One-outstanding DMA-like engine] --> FW[SoCShield firewall and update controller]
-    FW -->|allowed requests only| ARB
-    ARB --> SRAM[64 KiB shared SRAM]
-    CTRL -->|simulation observations| TB[Testbench scoreboard and delay injection]
-```
+![Implemented system architecture and access paths](figures/system-architecture.svg)
+
+This architectural view follows the implemented connections. Arbitration and storage are logical blocks within the same SRAM endpoint module. Arrows summarize access paths; detailed cycle behavior remains in the interface specification. The console and testbench observation/delay wiring are omitted for clarity.
 
 `rtl/soc/soc_top.sv` decodes full CPU addresses. CPU instruction fetches and stack accesses use private RAM. CPU MMIO accesses reach the firewall-control wrapper, DMA staging registers, or simulation log. The DMA engine has no direct route to CPU private RAM or MMIO: its only request path is through `firewall_mmio`/`firewall_update`, then to the shared-SRAM port. The SRAM checks its complete 32-bit address before calculating an index, so truncation cannot turn a forbidden address into a shared-memory alias.
 

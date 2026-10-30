@@ -4,6 +4,8 @@
 
 The project now includes a pinned PicoRV32 CPU executing compiled RV32I firmware, a trusted configuration interface, a DMA-like peripheral, and shared SRAM arbitration. Start with [the integrated results](docs/integration/results.md), [architecture](docs/integration/architecture.md), [reproduction instructions](docs/integration/reproduce.md), and [student walkthrough](docs/integration/student-guide.md).
 
+![SoCShield system architecture](docs/integration/figures/system-architecture.svg)
+
 From this directory in PowerShell:
 
 ```powershell
