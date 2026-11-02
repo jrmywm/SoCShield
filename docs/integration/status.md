@@ -18,11 +18,14 @@
 
 2 November 2026 visual update: ten schematic views were exported from unchanged firewall/MMIO RTL with Yosys and Graphviz 14.1.3 via pinned Viz.js 3.25.0. Unedited DOT, rendered SVG, export recipes, logs, RTLIL JSON and source/output hashes are available. The architecture overview is explicitly labeled AI-assisted, while these circuit views are tool-generated. See `docs/integration/schematics.md` and `docs/integration/figures/schematics/manifest.json`. This adds structural visualization, not new functional/security proof claims.
 
+2 November 2026 frontend update: a local-only browser dashboard now launches the existing `scripts/soc.py` flow and displays run metrics, testbench transaction events, simulation output, and an optional VCD waveform. An actual shadow-bank run launched through the dashboard passed at 17,279 simulated cycles, with 2,141 event records and a retrievable waveform. Python/JavaScript syntax checks passed. The run is retained at `build/soc/frontend-runs/20261102-172308-60b8ee/`. The refreshed source/evidence archive validated 965 files, internal hashes, and ZIP integrity. See `docs/integration/dashboard.md`. This remains RTL simulation, not physical FPGA control.
+
 - `build/soc/boot/`, `demo-stop/`, `demo-shadow/`: firmware ELF/disassembly/image, logs, metrics, events, source manifests; demo VCDs.
 - `build/soc/clean-stop/`, `clean-shadow/`: clean output-folder reproduction after moving the previous simulator cache aside; both PASS.
 - `build/soc/verification/report.json`: current-source component tests, proof jobs, and mutants.
 - `build/soc/evaluation/summary.csv`, `analysis.csv`: raw measurements and event-derived active-job analysis for all 34 runs.
 - `build/soc/mapped/report.json`: mapped block cost, source and library hashes; timing explicitly unavailable.
+- `build/soc/frontend-runs/`: timestamped runs launched from the browser interface.
 - `evidence/integration/`: compact tracked results for review without a full rebuild.
 - `docs/integration/results.md`: generated measured report; `reproduce.md`, `evidence-matrix.md`, `decisions.md`, `student-guide.md`: interpretation and reproduction.
 - `deliverables/SoCShield-RISC-V-source-and-evidence.zip` and `.zip.sha256`: generated source/evidence package, produced by `scripts/package_soc.py`.

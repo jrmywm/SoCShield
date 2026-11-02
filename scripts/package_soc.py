@@ -5,13 +5,13 @@ ROOT=pathlib.Path(__file__).resolve().parents[1]
 def main():
     validate_and_report()
     files=set()
-    for folder in('rtl','firmware','tb','formal','scripts','docs','config','third_party'):
+    for folder in('rtl','firmware','tb','formal','scripts','docs','config','third_party','frontend'):
         files.update(p for p in(ROOT/folder).rglob('*')if p.is_file() and '__pycache__'not in p.parts and p.suffix not in('.pyc','.vvp','.sqlite'))
     files.update([ROOT/'README.md',ROOT/'.gitignore',ROOT/'.gitattributes',ROOT/'tools/compiler-provenance.json',ROOT/'tools/compiler-release.json',ROOT/'tools/library/PROVENANCE.txt'])
     if (ROOT/'tools/viz-provenance.json').exists():files.add(ROOT/'tools/viz-provenance.json')
     files.update(p for p in(ROOT/'evidence').rglob('*')if p.is_file())
     # Full installed tools are fetched by documented pinned URLs, not redistributed.
-    allowed={'.json','.csv','.log','.md','.txt','.elf','.bin','.hex','.dis','.map','.v','.sv','.svh','.sby','.ys','.vcd'}
+    allowed={'.json','.csv','.log','.md','.txt','.elf','.bin','.hex','.dis','.map','.v','.sv','.svh','.sby','.ys','.vcd','.html','.css','.js'}
     for p in(ROOT/'build').rglob('*'):
         if not p.is_file():continue
         rel=p.relative_to(ROOT/'build');parts=rel.parts

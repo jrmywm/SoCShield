@@ -24,6 +24,10 @@ From this directory in PowerShell:
 
 The required deliverable is RTL simulation with compiled firmware, component verification, and controlled measurements. Technology mapping measures the firewall/control wrapper's library-cell area. Static timing and physical FPGA operation are not established. Dependencies can be fetched and checked with `scripts/setup_soc.py`; the original OSS CAD Suite installation remains required.
 
+### Local simulation dashboard
+
+Launch the browser interface from PowerShell with `.scriptsun_dashboard.ps1`. It runs only on `127.0.0.1`, launches the same compiled-firmware RTL simulation used by the command-line flow, and displays transaction metrics, commit events, simulation output, and an optional VCD waveform. It requires the pinned local OSS CAD Suite and firmware compiler. The interface is a local simulation viewer, not an FPGA control panel. See [dashboard guide](docs/integration/dashboard.md).
+
 ## Standalone baseline
 
 A working RTL portfolio study of a hardware firewall on the sole memory path of an untrusted DMA-like peripheral. It enforces four address regions and compares two ways to change permissions safely during traffic. This is established access-control technology; the contribution here is the implementation, verification evidence, and controlled cost comparison.
