@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d25">
+  <title>SoCShield | RTL Simulation Console</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="SoCShield home"><span class="brand-mark">S</span><span>SoCShield<small>INTEGRATION LAB</small></span></a>
+    <div class="live-label"><i></i> LOCAL SIMULATION</div>
+  </header>
+  <main>
+    <section class="intro">
+      <div class="eyebrow">RISC-V · MEMORY PROTECTION · RTL</div>
+      <h1>See the protection<br><em>work in real time.</em></h1>
+      <p>Configure a run, launch the compiled firmware on the simulated PicoRV32 system, and inspect the traffic and policy update results.</p>
+      <div class="notice"><span>ⓘ</span> Runs use RTL simulation on this computer. This dashboard does not control a physical FPGA.</div>
+    </section>
+
+    <section class="workspace">
+      <aside class="panel controls">
+        <div class="section-head"><div><span class="eyebrow">01 / CONFIGURE</span><h2>Simulation setup</h2></div><span class="chip">RTL</span></div>
+        <form id="run-form">
+          <label class="field-label" for="mode">Policy update method</label>
+          <div class="mode-select">
+            <label class="mode-option"><input type="radio" name="mode" value="0" checked><span><b>Stop &amp; program</b><small>Pause new requests, drain, then update.</small></span></label>
+            <label class="mode-option"><input type="radio" name="mode" value="1"><span><b>Shadow bank</b><small>Program inactive policy, then switch.</small></span></label>
+          </div>
+          <div class="field-grid">
+            <label><span class="field-label">Programming gap <small>loop iterations</small></span><input id="gap" type="number" min="0" max="10000" value="0"></label>
+            <label><span class="field-label">Memory stall <small>cycles</small></span><input id="stall" type="number" min="0" max="100000" value="0"></label>
+            <label><span class="field-label">Random seed</span><input id="seed" type="number" min="1" max="2147483647" value="1"></label>
+            <label class="check-field"><input id="contention" type="checkbox"><span>CPU shared-memory reads<small>Run concurrent CPU access workload</small></span></label>
+          </div>
+          <label class="check-field trace-check"><input id="trace" type="checkbox" checked><span>Capture waveform<small>Save VCD trace for this run</small></span></label>
+          <button class="run-button" id="run-button" type="submit"><span>▶</span> Run simulation <b>↗</b></button>
+          <p class="form-foot">The firmware workload and RTL checks are fixed and reproducible. Settings change only the documented simulation conditions.</p>
+        </form>
+      </aside>
+
+      <section class="panel monitor">
+        <div class="section-head"><div><span class="eyebrow">02 / OBSERVE</span><h2>Run monitor</h2></div><span id="status-pill" class="status-pill idle"><i></i><span>Ready</span></span></div>
+        <div class="empty-state" id="empty-state"><div class="pulse-icon">⌁</div><h3>Waiting for a simulation</h3><p>Choose an update method and start a run. Results and transaction events will appear here.</p></div>
+        <div id="result-area" class="result-area hidden">
+          <div class="run-summary"><div><span class="muted-label">RUN ID</span><code id="run-id">—</code></div><div><span class="muted-label">CONFIGURATION</span><b id="run-config">—</b></div></div>
+          <div class="metrics-grid" id="metrics-grid"></div>
+          <div class="event-head"><div><span class="eyebrow">TRANSACTION TRACE</span><h3>Requests, responses &amp; policy update</h3></div><a id="wave-link" class="text-link hidden" target="_blank" rel="noopener">Open VCD ↗</a></div>
+          <div class="timeline-wrap"><canvas id="timeline" height="180" aria-label="Simulation transaction event timeline"></canvas><div class="legend"><span><i class="req"></i> DMA request</span><span><i class="rsp"></i> Response</span><span><i class="ack"></i> Commit acknowledgement</span></div></div>
+          <details class="log-details"><summary>Simulation output</summary><pre id="sim-log"></pre></details>
+        </div>
+      </section>
+    </section>
+    <footer><span>SoCShield · engineering simulation interface</span><span>Designed for local use · no data leaves this computer</span></footer>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>
