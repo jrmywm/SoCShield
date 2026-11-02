@@ -10,6 +10,8 @@ This is a one-clock RTL simulation platform for studying the existing SoCShield 
 
 This architectural view follows the implemented connections. Arbitration and storage are logical blocks within the same SRAM endpoint module. Arrows summarize access paths; detailed cycle behavior remains in the interface specification. The console and testbench observation/delay wiring are omitted for clarity.
 
+The overview is an AI-assisted explanatory drawing. For views whose components and connections are extracted by Yosys and automatically laid out by Graphviz, see [tool-generated RTL schematics](schematics.md).
+
 `rtl/soc/soc_top.sv` decodes full CPU addresses. CPU instruction fetches and stack accesses use private RAM. CPU MMIO accesses reach the firewall-control wrapper, DMA staging registers, or simulation log. The DMA engine has no direct route to CPU private RAM or MMIO: its only request path is through `firewall_mmio`/`firewall_update`, then to the shared-SRAM port. The SRAM checks its complete 32-bit address before calculating an index, so truncation cannot turn a forbidden address into a shared-memory alias.
 
 The CPU is trusted; the peripheral is the subject of enforcement. The DMA here is a synthesizable, sequential demonstration engine controlled by firmware, not a free-running adversarial master. It can be staged with a target, word count, operation, and write pattern, but issues one aligned word at a time and waits for each response. The firewall is tested independently against arbitrary changing inputs in its standalone/formal environment. Neither the firewall nor this integration authenticates a compromised CPU or trusted configuration path.

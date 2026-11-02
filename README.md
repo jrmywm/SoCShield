@@ -6,6 +6,12 @@ The project now includes a pinned PicoRV32 CPU executing compiled RV32I firmware
 
 ![SoCShield system architecture](docs/integration/figures/system-architecture.svg)
 
+The overview is an AI-assisted explanatory drawing. [Tool-generated RTL schematics](docs/integration/schematics.md) provide separate, reproducible circuit views exported by Yosys and laid out by Graphviz. Generate them locally with:
+
+```powershell
+& .\tools\oss-cad-suite\lib\python3.exe scripts\export_schematics.py --setup
+```
+
 From this directory in PowerShell:
 
 ```powershell

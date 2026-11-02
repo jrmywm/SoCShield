@@ -16,6 +16,8 @@
 
 ## Current evidence
 
+2 November 2026 visual update: ten schematic views were exported from unchanged firewall/MMIO RTL with Yosys and Graphviz 14.1.3 via pinned Viz.js 3.25.0. Unedited DOT, rendered SVG, export recipes, logs, RTLIL JSON and source/output hashes are available. The architecture overview is explicitly labeled AI-assisted, while these circuit views are tool-generated. See `docs/integration/schematics.md` and `docs/integration/figures/schematics/manifest.json`. This adds structural visualization, not new functional/security proof claims.
+
 - `build/soc/boot/`, `demo-stop/`, `demo-shadow/`: firmware ELF/disassembly/image, logs, metrics, events, source manifests; demo VCDs.
 - `build/soc/clean-stop/`, `clean-shadow/`: clean output-folder reproduction after moving the previous simulator cache aside; both PASS.
 - `build/soc/verification/report.json`: current-source component tests, proof jobs, and mutants.

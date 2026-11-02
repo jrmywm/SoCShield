@@ -1,0 +1,9 @@
+{
+  "package": "@viz-js/viz",
+  "version": "3.25.0",
+  "url": "https://registry.npmjs.org/@viz-js/viz/-/viz-3.25.0.tgz",
+  "integrity": "sha512-dM7zAYMdf7mcRz5Kdb+YJb6+qv5Rjk0rPZ18gROdpMrP/3S7RFOp8uxybeiz5RypHrE1zo1vccA8Twh4mIcLZw==",
+  "sha256": "938e85d336cd04dad8a69a794d927fc58f83cf70d78451990f93de889123c2cf",
+  "renderer_sha256": "45540c7051e72099c2d5147bdd5d57213ad3cde8b096e3070bbd0651d7dfd801",
+  "upstream": "https://github.com/mdaines/viz-js"
+}

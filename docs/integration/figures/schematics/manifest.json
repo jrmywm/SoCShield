@@ -1,0 +1,97 @@
+{
+  "kind": "tool-generated optimized RTL schematics, not technology-mapped physical layouts",
+  "yosys": "Yosys 0.70+277 (git sha1 77dddbd66, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)",
+  "graphviz": {
+    "package": "@viz-js/viz",
+    "version": "3.25.0",
+    "graphviz": "14.1.3"
+  },
+  "sources": {
+    "rtl\\firewall_update.sv": "8f057a8c45829d79cb6de03ed420f21ceba3a79ade1b27beb4e5d51e946b9bbb",
+    "rtl\\peripherals\\firewall_mmio.sv": "3fd1d6c83bb6b04c6f3af7b657c076a5d86c8dc51ea9f89d5fd955082e40e427",
+    "scripts\\export_schematics.py": "a0e2006febd48a9f7b0e8f0b4033fb32e6f9871501d0fda6382a8830c3ed703c",
+    "scripts\\render_schematic.cjs": "97aee1b611829db2ead52eca458e69618bba42adba7f3a576a3f9ccc451a8436"
+  },
+  "views": [
+    {
+      "name": "stop_full",
+      "scope": "whole firewall_update module",
+      "mode": 0,
+      "dot_sha256": "de1df38433af9e366d289e45a09fd4f4cb21170f7a3070e86a6186fd2623b281",
+      "svg_sha256": "418796ed99d76d1df39ce3813cfd6c946dfb245b5f013b806bc25e7704761916"
+    },
+    {
+      "name": "stop_access",
+      "scope": "combinational input cone of allowed",
+      "mode": 0,
+      "dot_sha256": "be731f5b3f3d2b8583c49d0e49faf731d3a39bc9d838dfb081221a94742d3db5",
+      "svg_sha256": "3fc53938278e9ea1e7ee343b6e1940f7f67042278ed3d3b26837729711681e9b"
+    },
+    {
+      "name": "stop_handshakes",
+      "scope": "union of combinational input cones for req_ready, mem_req_valid, rsp_valid",
+      "mode": 0,
+      "dot_sha256": "a939c1f308f486956f480382ac65541afbe608de702812be1adc0f152cc78f82",
+      "svg_sha256": "2e8365e40306f5f93f0beca32bdf4211c6021590a602a19b6a93416026b0175b"
+    },
+    {
+      "name": "stop_wrapper",
+      "scope": "firewall instance and its connected boundary wires within firewall_mmio",
+      "mode": 0,
+      "dot_sha256": "39327699ae6dcaa3dfb6c08e9c2eadf10dbe70970d838d78a6d8fbfe6facffa4",
+      "svg_sha256": "cfeefa868fed7ee39f98c936a65b58e58f7cac1f99659d52e497fcc1f76e296d"
+    },
+    {
+      "name": "stop_valids",
+      "scope": "combinational input cones for mem_req_valid and rsp_valid; state register is a cut point",
+      "mode": 0,
+      "dot_sha256": "da3741399c060a18c1b56ff84b3873017299ba1b4d919b1172e8aaf64485c7f5",
+      "svg_sha256": "1d9d46c0c296b98cb27e41eddd97e9b609cf0edf07236e0bf54dc8b99f2de0ac"
+    },
+    {
+      "name": "shadow_full",
+      "scope": "whole firewall_update module",
+      "mode": 1,
+      "dot_sha256": "3b744bed74b6b5c808246c55287a91c800c44566a7656bbc5f295757854ea665",
+      "svg_sha256": "fef7668552f9a7090a51ef6f7bb15c80b9ed5c4dadd4c1d8de91193adb4d26cb"
+    },
+    {
+      "name": "shadow_access",
+      "scope": "combinational input cone of allowed",
+      "mode": 1,
+      "dot_sha256": "0507f8c2179ae0c45f394594ada30f9277633e6d63d1bf966995647e7d8857bd",
+      "svg_sha256": "559e811aebf7727b5731531516c675561ba1372e317697a779c4c0cc4f68dd25"
+    },
+    {
+      "name": "shadow_handshakes",
+      "scope": "union of combinational input cones for req_ready, mem_req_valid, rsp_valid",
+      "mode": 1,
+      "dot_sha256": "37d78077eb67dacb252a717c0f878334bb07907cc5dafe0780b458d38c6defbc",
+      "svg_sha256": "f859171b2b6afa84d319cba28953563ab32dc0f320aaf039f0fe40cb8041b07d"
+    },
+    {
+      "name": "shadow_wrapper",
+      "scope": "firewall instance and its connected boundary wires within firewall_mmio",
+      "mode": 1,
+      "dot_sha256": "7ef07dc4abe4a16cac7710954c720b5e339d142d075ac3ef13112e29a60fcf6e",
+      "svg_sha256": "02440882fe74601bda94b0005673e347930ff874703262cb2a53c9f0936870a8"
+    },
+    {
+      "name": "shadow_valids",
+      "scope": "combinational input cones for mem_req_valid and rsp_valid; state register is a cut point",
+      "mode": 1,
+      "dot_sha256": "2809ac3a4b4abff8a7b6f39b39293ffc8c7beb7330846f4f8f5ceaf0d161e472",
+      "svg_sha256": "4d75e24bc29df9c010454d6d9f4233a09b785bea3b71e9dd7117fa23130f79e5"
+    }
+  ],
+  "graphviz_archive": {
+    "package": "@viz-js/viz",
+    "version": "3.25.0",
+    "url": "https://registry.npmjs.org/@viz-js/viz/-/viz-3.25.0.tgz",
+    "integrity": "sha512-dM7zAYMdf7mcRz5Kdb+YJb6+qv5Rjk0rPZ18gROdpMrP/3S7RFOp8uxybeiz5RypHrE1zo1vccA8Twh4mIcLZw==",
+    "sha256": "938e85d336cd04dad8a69a794d927fc58f83cf70d78451990f93de889123c2cf",
+    "renderer_sha256": "45540c7051e72099c2d5147bdd5d57213ad3cde8b096e3070bbd0651d7dfd801",
+    "upstream": "https://github.com/mdaines/viz-js"
+  },
+  "interpretation": "Diamond nodes at cone boundaries are cut-point signals, not newly added hardware. Auto-numbered cells map to source locations in Yosys logs. Schematics do not constitute a correctness proof."
+}

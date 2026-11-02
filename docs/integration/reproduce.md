@@ -64,6 +64,8 @@ Edit `config/soc_map.json` as the source of truth. The generated files are `rtl/
 
 ## Report and archive
 
+For tool-generated circuit diagrams, run `scripts/export_schematics.py --setup` with the same Python interpreter. It uses pinned Graphviz WebAssembly through Node.js, records the exact Yosys commands and source/output hashes, and saves unedited DOT plus SVG views. See [schematic export instructions](schematics.md). This is separate from the AI-assisted explanatory architecture drawing.
+
 ```powershell
 & .\tools\oss-cad-suite\lib\python3.exe scripts\report_soc.py
 & .\tools\oss-cad-suite\lib\python3.exe scripts\package_soc.py
