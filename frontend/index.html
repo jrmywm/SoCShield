@@ -49,6 +49,12 @@
           <div class="metrics-grid" id="metrics-grid"></div>
           <div class="event-head"><div><span class="eyebrow">TRANSACTION TRACE</span><h3>Requests, responses &amp; policy update</h3></div><a id="wave-link" class="text-link hidden" target="_blank" rel="noopener">Open VCD ↗</a></div>
           <div class="timeline-wrap"><canvas id="timeline" height="180" aria-label="Simulation transaction event timeline"></canvas><div class="legend"><span><i class="req"></i> DMA request</span><span><i class="rsp"></i> Response</span><span><i class="ack"></i> Commit acknowledgement</span></div></div>
+          <div class="playback">
+            <div class="playback-title"><div><span class="eyebrow">CYCLE PLAYBACK</span><h3>Replay policy update</h3></div><label>Speed <select id="play-speed"><option value="100">100 cycles/s</option><option value="500" selected>500 cycles/s</option><option value="2000">2,000 cycles/s</option></select></label></div>
+            <canvas id="playback" height="144" aria-label="Animated replay of simulation events near the policy update"></canvas>
+            <div class="playback-controls"><button id="play-toggle" type="button">▶ Play</button><input id="cycle-range" type="range" min="0" max="1" value="0" aria-label="Simulation cycle position"><code id="cycle-label">Cycle —</code></div>
+            <p class="playback-note">Recorded testbench events replayed around the update. Playback is a visualization, not live hardware.</p>
+          </div>
           <details class="log-details"><summary>Simulation output</summary><pre id="sim-log"></pre></details>
         </div>
       </section>
@@ -56,5 +62,6 @@
     <footer><span>SoCShield · engineering simulation interface</span><span>Designed for local use · no data leaves this computer</span></footer>
   </main>
   <script src="/app.js" defer></script>
+  <script src="/animation.js" defer></script>
 </body>
 </html>

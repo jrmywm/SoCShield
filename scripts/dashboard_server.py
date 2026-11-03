@@ -132,6 +132,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
             self.send_bytes((WEB / "app.css").read_bytes(), "text/css; charset=utf-8")
         elif path == "/app.js":
             self.send_bytes((WEB / "app.js").read_bytes(), "text/javascript; charset=utf-8")
+        elif path == "/animation.js":
+            self.send_bytes((WEB / "animation.js").read_bytes(), "text/javascript; charset=utf-8")
         elif path == "/api/status":
             with LOCK:
                 self.send_json(dict(STATE))

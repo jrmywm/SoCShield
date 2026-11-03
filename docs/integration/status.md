@@ -20,6 +20,8 @@
 
 2 November 2026 frontend update: a local-only browser dashboard now launches the existing `scripts/soc.py` flow and displays run metrics, testbench transaction events, simulation output, and an optional VCD waveform. An actual shadow-bank run launched through the dashboard passed at 17,279 simulated cycles, with 2,141 event records and a retrievable waveform. Python/JavaScript syntax checks passed. The run is retained at `build/soc/frontend-runs/20261102-172308-60b8ee/`. The refreshed source/evidence archive validated 965 files, internal hashes, and ZIP integrity. See `docs/integration/dashboard.md`. This remains RTL simulation, not physical FPGA control.
 
+3 November 2026 dashboard replay update: added browser playback of the recorded transaction events around begin-to-ack, with cycle scrubber and speed control. Validated the standalone server's page/status/run endpoints and a stop-and-program run through it (18,119 cycles, PASS) after fixing the bundled Python socket cleanup. Replay uses `events.csv` records; it is a visualization of saved simulation events, not a live waveform renderer or hardware trace.
+
 - `build/soc/boot/`, `demo-stop/`, `demo-shadow/`: firmware ELF/disassembly/image, logs, metrics, events, source manifests; demo VCDs.
 - `build/soc/clean-stop/`, `clean-shadow/`: clean output-folder reproduction after moving the previous simulator cache aside; both PASS.
 - `build/soc/verification/report.json`: current-source component tests, proof jobs, and mutants.

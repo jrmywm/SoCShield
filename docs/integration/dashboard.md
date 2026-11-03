@@ -26,6 +26,8 @@ Press **Run simulation**. The server invokes `scripts/soc.py` with an argument a
 
 The monitor reports simulation clock cycles, DMA accepted/completed requests, error responses, begin-to-acknowledgment latency, observed request gap, and whether an operation was outstanding when the update began. Error responses include intentional policy-denial tests; they are not all failures. Event markers come from the testbench's `events.csv`. The VCD link downloads the simulation waveform when capture was enabled. The simulation output preserves firmware messages and the final `PASS soc` line.
 
+**Cycle playback** replays recorded request, response, and commit-ack events around the policy update. Play/pause, speed, and the scrubber change only the browser visualization; they do not rerun or alter the simulation. The cursor reports simulated cycles, and only events inside the selected update window are shown.
+
 The request-gap card displays the run's raw `max_acceptance_gap` field. For controlled performance interpretation, use the derived active-job metric and caveats in [measured results](results.md); the raw gap may include periods outside the designated DMA job.
 
 ## Local service boundary
