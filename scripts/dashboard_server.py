@@ -176,6 +176,13 @@ class Handler(http.server.BaseHTTPRequestHandler):
         self.send_json({"run_id": run_id, "status": "starting"}, 202)
 
 
+class LocalHTTPServer(http.server.HTTPServer):
+    def shutdown_request(self, request):
+        # The OSS CAD Suite's embedded Python socket wrapper lacks shutdown().
+        # HTTP/1.0 closes each response, so closing the socket is sufficient.
+        request.close()
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", type=int, default=8765)
@@ -186,7 +193,7 @@ def main():
     RUNS.mkdir(parents=True, exist_ok=True)
     # The simulation itself runs in a worker; a single-threaded HTTP server is
     # enough for this local UI and avoids shutdown races in bundled Python builds.
-    server = http.server.HTTPServer(("127.0.0.1", args.port), Handler)
+    server = LocalHTTPServer(("127.0.0.1", args.port), Handler)
     print(f"SoCShield simulation dashboard: http://127.0.0.1:{args.port}")
     if args.open:
         threading.Timer(0.5, lambda: webbrowser.open(f"http://127.0.0.1:{args.port}")).start()
