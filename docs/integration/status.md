@@ -16,6 +16,8 @@
 
 ## Current evidence
 
+5 November 2026 presentation update: `demo-story.md` maps a five-minute default-deny, grant, revoke and regrant demonstration to the existing firmware checks. It includes defense questions, evidence boundaries and the important distinction between out-of-region denials and revocation effects in the 1,024-word workload. Reviewed against `firmware/main.c`, the student guide and evidence matrix. Documentation-only change; no new simulation or formal results claimed. Browser interaction review remains outstanding.
+
 2 November 2026 visual update: ten schematic views were exported from unchanged firewall/MMIO RTL with Yosys and Graphviz 14.1.3 via pinned Viz.js 3.25.0. Unedited DOT, rendered SVG, export recipes, logs, RTLIL JSON and source/output hashes are available. The architecture overview is explicitly labeled AI-assisted, while these circuit views are tool-generated. See `docs/integration/schematics.md` and `docs/integration/figures/schematics/manifest.json`. This adds structural visualization, not new functional/security proof claims.
 
 2 November 2026 frontend update: a local-only browser dashboard now launches the existing `scripts/soc.py` flow and displays run metrics, testbench transaction events, simulation output, and an optional VCD waveform. An actual shadow-bank run launched through the dashboard passed at 17,279 simulated cycles, with 2,141 event records and a retrievable waveform. Python/JavaScript syntax checks passed. The run is retained at `build/soc/frontend-runs/20261102-172308-60b8ee/`. The refreshed source/evidence archive validated 965 files, internal hashes, and ZIP integrity. See `docs/integration/dashboard.md`. This remains RTL simulation, not physical FPGA control.

@@ -1,5 +1,7 @@
 # Student walkthrough and defense guide
 
+For a five-minute presentation with concrete firmware observations and interview rehearsal questions, start with [the demonstration story](demo-story.md).
+
 This guide is a compact route through the implementation. Run the commands in [reproduce.md](reproduce.md) from the project root. The final boot, paired demonstrations, component verification, and 34-run evaluation were rebuilt and checked against current source hashes. Use [results.md](results.md) for measured findings and their limits. After later source changes, regenerate affected evidence before citing it.
 
 ## Walkthrough
